@@ -34,6 +34,28 @@ So... what's the point then? Just making your local environment a safer and nice
 
 Oh, and every time `sshok` needs to change the configuration file it will gently back the current one both alongside the newly-generated one and to a customizable backups directory. For more info on that, you may want to check out the source. Have you seen those lovely comments?
 
+## Using an alias
+
+You can define an alias for `sshok` so that instead of those two productivity draining keypresses (<kbd>o</kbd> and <kbd>k</kbd>) like follows:
+
+```console
+$ alias ssh=sshok
+```
+
+Just put that in your shells `rc` file, logout/login again and bam! Just use `ssh` normally to run `sshok`.
+
+## Getting completion to work
+
+If, like me, you depend on your <kbd>Tab</kbd> key to the point of not remembering FQDNs or even host aliases, you're going to need to enable shell completion for `sshok`. How exactly you do that, depends on your shell.
+
+### For zsh (using oh-my-zsh, antigen or similar)
+
+You will need to put this in your `.zshrc` file:
+
+```shell
+compdef _hosts sshok
+```
+
 ## Customization
 
 `sshok` can be customized by specifying the following environment variables:
