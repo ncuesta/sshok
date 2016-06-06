@@ -53,7 +53,7 @@ If, like me, you depend on your <kbd>Tab</kbd> key to the point of not rememberi
 You will need to put this in your `.zshrc` file:
 
 ```shell
-compdef _hosts sshok
+compdef '_dispatch ssh ssh' sshok
 ```
 
 ## Customization
