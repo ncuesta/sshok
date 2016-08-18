@@ -86,7 +86,7 @@ Just by running `sshok`, if the `$SSH_CONFIG_DIR` does not exist it will be crea
 
 Thanks to @leoditommaso for pushing me into this. :laughing:
 
-Thanks to @einar-lanfranco for working on #1.
+Thanks to @einar-lanfranco for working on [#1](https://github.com/ncuesta/sshok/pull/1).
 
 ## License
 
