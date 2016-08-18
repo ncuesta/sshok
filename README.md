@@ -67,6 +67,7 @@ compdef '_dispatch ssh ssh' sshok
 | `$SSH_CONFIG_FILE`        | `SSH_DIR/config`    | Path to the configuration file used by `ssh`.                                                                                                     |
 | `$BACKUPS_DIR`            | `/tmp/sshok`        | Path to the directory where configuration backups will be stored. A backup will be created every time the `$SSH_CONFIG_FILE` needs to be updated. |
 | `$UNWANTED_LINES_PATTERN` | `"# vim:"`          | String that will be fed to `grep -v` to filter out unwanted lines when concatenating the files.                                                   |
+| `$SSH_CONFIG_DIRS`        | `$SSH_CONFIG_DIR`   | String with a space-delimited list of directories to look for source configuration files and where to put the each resulting concatenated file.   |
 
 These may be overridden by passing the as local variables for `sshok` or by having them defined as global `ENV` variables:
 
@@ -84,6 +85,8 @@ Just by running `sshok`, if the `$SSH_CONFIG_DIR` does not exist it will be crea
 ## Contributors
 
 Thanks to @leoditommaso for pushing me into this. :laughing:
+
+Thanks to @einar-lanfranco for working on #1.
 
 ## License
 
