@@ -42,11 +42,13 @@ SSH_CONFIG_DIR=${SSH_CONFIG_DIR:-$SSH_DIR/config.d}
 SSH_CONFIG_FILE=${SSH_CONFIG_FILE:-$SSH_DIR/config}
 BACKUPS_DIR=${BACKUPS_DIR:-/tmp/sshok}
 UNWANTED_FILES_PATTERN="# vim:"
-# Sometimes you need to share configuration file with multiple idependent groups, so you need multiple 
-# config sources, for example 2 different git projects in folders job1 and job2.
-# Example SSH_CONFIG_DIRS="$HOME/job1 $HOME/job2 ${SSH_CONFIG_DIR}"
-# Default
-SSH_CONFIG_DIRS="${SSH_CONFIG_DIR}"
+# Sometimes you need to share configuration files with different, unrelated groups thus creating
+# the need to more than a single config directory. For instance, working on 2 different projects
+# with people unrelated between them -- imagine two directories, "job1" and "job2", one for each
+# project:
+# SSH_CONFIG_DIRS="$HOME/job1 $HOME/job2 ${SSH_CONFIG_DIR}"
+# The default value for SSH_CONFIG_DIRS is $SSH_CONFIG_DIR.
+SSH_CONFIG_DIRS="${SSH_CONFIG_DIRS:-$SSH_CONFIG_DIR}"
 
 
 # Get the filename with the most recently mtime from the path passed in the first argument. $1 is
