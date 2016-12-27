@@ -88,6 +88,8 @@ Thanks to @leoditommaso for pushing me into this. :laughing:
 
 Thanks to @einar-lanfranco for working on [#1](https://github.com/ncuesta/sshok/pull/1).
 
+Thanks to @nicolasmacia for allowing symlinks to be treated as regular configuration files.
+
 ## License
 
 `sshok` is licensed under the MIT license. Legal `char *` follows:

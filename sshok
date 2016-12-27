@@ -57,9 +57,9 @@ newest_file_in() {
   if [ -e $1 ]; then
     stat=$(determine_stat_variation $1)
     if [ $stat = "-c" ]; then
-      find $SSH_CONFIG_DIRS -type f -print0 | xargs -0 stat -c '%Y %n' | sort -rn | head -1 | cut -d' ' -f2
+      find -L $SSH_CONFIG_DIRS -type f -print0 | xargs -0 stat -c '%Y %n' | sort -rn | head -1 | cut -d' ' -f2
     else
-      find $SSH_CONFIG_DIRS -type f -print0 | xargs -0 stat -f '%m %N' | sort -rn | head -1 | cut -d' ' -f2
+      find -L $SSH_CONFIG_DIRS -type f -print0 | xargs -0 stat -f '%m %N' | sort -rn | head -1 | cut -d' ' -f2
     fi
   fi
 }
